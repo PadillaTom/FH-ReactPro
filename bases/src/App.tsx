@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import Counter from "./bases/Counter";
 
 function App() {
-  return (
-    <React.Fragment>
-      <h1>React - Bases</h1>
-      <hr/>
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<Counter initialValue={15}></Counter>
+		</React.Fragment>
+	);
 }
 
 export default App;
