@@ -24,7 +24,7 @@ const CounterBy = ({ initialValue = 5 }: Props) => {
 
 	return (
 		<React.Fragment>
-			<h1>Counter: {counter}</h1>
+			<h1>CounterBy: {counter}</h1>
 			<h1>Clicks: {clicks}</h1>
 			<button
 				onClick={() => {
