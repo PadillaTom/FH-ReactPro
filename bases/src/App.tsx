@@ -7,6 +7,7 @@ function App() {
 			<Counter initialValue={5}></Counter>
 			<CounterBy initialValue={15}></CounterBy>
 			<CounterEffect></CounterEffect>
+			<CounterEffect></CounterEffect>
 		</React.Fragment>
 	);
 }
