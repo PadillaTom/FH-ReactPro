@@ -30,7 +30,7 @@ const CounterEffect = () => {
 
 	return (
 		<React.Fragment>
-			<h1>CounterEffect:</h1>
+			<h1>Counter Effect:</h1>
 			<h2 ref={counterHTMLElement}>{counter}</h2>
 
 			<button onClick={handleClick}>+1</button>

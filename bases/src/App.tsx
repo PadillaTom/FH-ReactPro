@@ -1,5 +1,12 @@
 import React from "react";
-import { Counter, CounterBy, CounterEffect, CounterHook } from "./bases";
+import {
+	Counter,
+	CounterBy,
+	CounterEffect,
+	CounterHook,
+	// CounterReducer,
+} from "./bases";
+import CounterReducerComponent from "./counter-reducer/CounterReducerComponent";
 
 function App() {
 	return (
@@ -8,6 +15,7 @@ function App() {
 			<CounterBy initialValue={15}></CounterBy>
 			<CounterEffect></CounterEffect>
 			<CounterHook></CounterHook>
+			<CounterReducerComponent></CounterReducerComponent>
 		</React.Fragment>
 	);
 }
