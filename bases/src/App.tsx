@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter, CounterBy, CounterEffect } from "./bases";
+import { Counter, CounterBy, CounterEffect, CounterHook } from "./bases";
 
 function App() {
 	return (
@@ -7,7 +7,7 @@ function App() {
 			<Counter initialValue={5}></Counter>
 			<CounterBy initialValue={15}></CounterBy>
 			<CounterEffect></CounterEffect>
-			<CounterEffect></CounterEffect>
+			<CounterHook></CounterHook>
 		</React.Fragment>
 	);
 }
