@@ -1,57 +1,49 @@
-import React from "react";
 import {
-	BrowserRouter,
-	NavLink,
-	Navigate,
+	BrowserRouter as Router,
+	Switch,
 	Route,
-	Routes,
+	NavLink,
 } from "react-router-dom";
-
 import logo from "../logo.svg";
-
-import "../index.css";
 
 const Navigation = () => {
 	return (
-		<BrowserRouter>
+		<Router>
 			<div className="main-layout">
 				<nav>
-					<img src={logo} alt="logo" />
+					<img src={logo} alt="Logo" />
 					<ul>
 						<li>
-							<NavLink
-								to="/home"
-								className={({ isActive }) => (isActive ? "nav-active" : "")}
-							>
+							<NavLink to="/" activeClassName="nav-active" exact>
 								Home
 							</NavLink>
 						</li>
 						<li>
-							<NavLink
-								to="/about"
-								className={({ isActive }) => (isActive ? "nav-active" : "")}
-							>
+							<NavLink to="/about" activeClassName="nav-active" exact>
 								About
 							</NavLink>
 						</li>
 						<li>
-							<NavLink
-								to="/users"
-								className={({ isActive }) => (isActive ? "nav-active" : "")}
-							>
+							<NavLink to="/users" activeClassName="nav-active" exact>
 								Users
 							</NavLink>
 						</li>
 					</ul>
 				</nav>
-				<Routes>
-					<Route path="home" element={<h1>Home</h1>}></Route>
-					<Route path="about" element={<h1>About</h1>}></Route>
-					<Route path="users" element={<h1>Users</h1>}></Route>
-					<Route path="/*" element={<Navigate to="/home" replace />}></Route>
-				</Routes>
+
+				<Switch>
+					<Route path="/" exact>
+						<h1>Home</h1>
+					</Route>
+					<Route path="/about">
+						<h1>About</h1>
+					</Route>
+					<Route path="/users">
+						<h1>Users</h1>
+					</Route>
+				</Switch>
 			</div>
-		</BrowserRouter>
+		</Router>
 	);
 };
 
